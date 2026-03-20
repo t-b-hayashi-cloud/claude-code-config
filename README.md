@@ -8,8 +8,8 @@ This repository contains reusable configurations that enhance Claude Code's capa
 
 ### 🤖 Agents (`agents/`)
 Specialized AI agents for specific workflows:
-- **planner** - Implementation planning for complex features
-- **architect** - System design and architectural decisions
+- **analysis-planner** - Analysis design planning (目的・仮説・データ要件)
+- **architect** - Code design, implementation planning and architectural decisions
 - **tdd-guide** - Test-driven development guidance
 - **code-reviewer** - General code review
 - **python-reviewer** - Python-specific review

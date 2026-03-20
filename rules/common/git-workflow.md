@@ -8,7 +8,7 @@
    - Prefer battle-tested libraries over hand-rolled solutions
 
 1. **Plan First**
-   - Use **planner** agent for complex features
+   - Use **architect** agent for complex features
    - Identify dependencies and risks, break down into phases
 
 2. **TDD Approach**

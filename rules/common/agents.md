@@ -6,8 +6,8 @@ Located in `~/.claude/agents/`:
 
 | Agent | Purpose | When to Use |
 |-------|---------|-------------|
-| `planner` | Implementation planning | Complex features, refactoring |
-| `architect` | System design | Architectural decisions |
+| `analysis-planner` | Analysis design planning | New analysis requests, hypothesis & data design |
+| `architect` | Code design & implementation planning | Technical design, complex features, refactoring |
 | `tdd-guide` | Test-driven development | New features, bug fixes |
 | `code-reviewer` | Code review | After writing code |
 | `python-reviewer` | Python-specific review | `.py` / `.ipynb` changes |
@@ -19,10 +19,10 @@ Located in `~/.claude/agents/`:
 ## Proactive Agent Usage
 
 No user prompt needed — activate automatically:
-1. Complex feature requests → **planner**
-2. Code just written/modified → **code-reviewer**
-3. Bug fix or new feature → **tdd-guide**
-4. Architectural decision → **architect**
+1. New analysis request (目的・仮説・データ要件の設計) → **analysis-planner**
+2. Complex code design or implementation → **architect**
+3. Code just written/modified → **code-reviewer**
+4. Bug fix or new feature → **tdd-guide**
 
 ## Parallel Task Execution
 
