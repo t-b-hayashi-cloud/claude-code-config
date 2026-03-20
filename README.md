@@ -13,7 +13,7 @@ Specialized AI agents for specific workflows:
 - **tdd-guide** - Test-driven development guidance
 - **code-reviewer** - General code review
 - **python-reviewer** - Python-specific review
-- **database-reviewer** - SQL and BigQuery analysis
+- **sql-reviewer** - BigQuery SQL review (cost, security, correctness)
 - **security-reviewer** - Security analysis
 - **refactor-cleaner** - Dead code cleanup
 - **doc-updater** - Documentation maintenance

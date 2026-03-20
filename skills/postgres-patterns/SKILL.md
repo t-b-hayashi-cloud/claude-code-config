@@ -1,11 +1,11 @@
 ---
 name: postgres-patterns
-description: PostgreSQL/BigQueryデータベースパターンのクイックリファレンス。クエリ最適化、スキーマ設計、インデックス設計、セキュリティ。詳細なレビューには database-reviewer エージェントを使用。
+description: PostgreSQL/BigQueryデータベースパターンのクイックリファレンス。クエリ最適化、スキーマ設計、インデックス設計、セキュリティ。詳細なレビューには sql-reviewer エージェントを使用。
 ---
 
 # PostgreSQL / BigQuery パターン
 
-クイックリファレンス。詳細なガイダンスについては `database-reviewer` エージェントを使用してください。
+クイックリファレンス。詳細なガイダンスについては `sql-reviewer` エージェントを使用してください。
 
 ## 起動タイミング
 
@@ -125,5 +125,5 @@ SELECT ...
 
 ## 関連
 
-- Agent: `database-reviewer` - 完全なデータベースレビューワークフロー
+- Agent: `sql-reviewer` - 完全なデータベースレビューワークフロー
 - Skill: `database-migrations` - マイグレーションパターン

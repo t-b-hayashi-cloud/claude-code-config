@@ -11,7 +11,7 @@ Located in `~/.claude/agents/`:
 | `tdd-guide` | Test-driven development | New features, bug fixes |
 | `code-reviewer` | Code review | After writing code |
 | `python-reviewer` | Python-specific review | `.py` / `.ipynb` changes |
-| `database-reviewer` | BigQuery review | SQL / schema changes |
+| `sql-reviewer` | BigQuery SQL review | SQL file creation / modification |
 | `security-reviewer` | Security analysis | Before commits with secrets/auth |
 | `refactor-cleaner` | Dead code cleanup | Code maintenance |
 | `doc-updater` | Documentation | Updating docs/reports |
