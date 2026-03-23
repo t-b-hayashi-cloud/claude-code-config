@@ -9,12 +9,13 @@ Located in `~/.claude/agents/`:
 | `analysis-planner` | Analysis design planning | New analysis requests, hypothesis & data design |
 | `architect` | Code design & implementation planning | Technical design, complex features, refactoring |
 | `tdd-guide` | Test-driven development | New features, bug fixes |
-| `code-reviewer` | Code review | After writing code |
+| `code-reviewer` | Language-agnostic base code review | After writing code (parallel with python-reviewer & sql-reviewer) |
 | `python-reviewer` | Python-specific review | `.py` / `.ipynb` changes |
 | `sql-reviewer` | BigQuery SQL review | SQL file creation / modification |
 | `security-reviewer` | Security analysis | Before commits with secrets/auth |
 | `refactor-cleaner` | Dead code cleanup | Code maintenance |
-| `doc-updater` | Documentation | Updating docs/reports |
+| `doc-updater` | Documentation & Notion writing (analysis plans/reports) | Updating docs/reports, writing to Notion |
+| `analysis-reporter` | Conclusion structuring for PPDAC cycle | Analysis Conclusion phase, aggregating results |
 
 ## Proactive Agent Usage
 
@@ -23,6 +24,7 @@ No user prompt needed — activate automatically:
 2. Complex code design or implementation → **architect**
 3. Code just written/modified → **code-reviewer**
 4. Bug fix or new feature → **tdd-guide**
+5. Analysis Conclusion phase (results aggregation & reporting) → **analysis-reporter**
 
 ## Parallel Task Execution
 

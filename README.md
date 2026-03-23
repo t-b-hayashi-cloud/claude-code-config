@@ -11,12 +11,13 @@ Specialized AI agents for specific workflows:
 - **analysis-planner** - Analysis design planning (目的・仮説・データ要件)
 - **architect** - Code design, implementation planning and architectural decisions
 - **tdd-guide** - Test-driven development guidance
-- **code-reviewer** - General code review
+- **code-reviewer** - Language-agnostic base code review (parallel with python-reviewer & sql-reviewer)
 - **python-reviewer** - Python-specific review
 - **sql-reviewer** - BigQuery SQL review (cost, security, correctness)
 - **security-reviewer** - Security analysis
 - **refactor-cleaner** - Dead code cleanup
-- **doc-updater** - Documentation maintenance
+- **doc-updater** - Documentation maintenance and Notion writing (analysis plans & reports)
+- **analysis-reporter** - Conclusion structuring for PPDAC cycle (analysis results aggregation)
 
 ### 📋 Rules (`rules/`)
 Context-specific guidelines organized by domain:
@@ -27,6 +28,7 @@ Context-specific guidelines organized by domain:
 ### 🛠️ Skills (`skills/`)
 Reusable skill definitions for specific tasks:
 - `database-migrations/` - Database schema management
+- `ppdac-workflow/` - PPDAC data analysis workflow with agent orchestration
 - `postgres-patterns/` - PostgreSQL best practices
 - `python-patterns/` - Python idioms and patterns
 - `python-testing/` - Testing strategies
