@@ -27,9 +27,7 @@ Context-specific guidelines organized by domain:
 
 ### 🛠️ Skills (`skills/`)
 Reusable skill definitions for specific tasks:
-- `database-migrations/` - Database schema management
 - `ppdac-workflow/` - PPDAC data analysis workflow with agent orchestration
-- `postgres-patterns/` - PostgreSQL best practices
 - `python-patterns/` - Python idioms and patterns
 - `python-testing/` - Testing strategies
 - `search-first/` - Code search workflows
@@ -37,7 +35,6 @@ Reusable skill definitions for specific tasks:
 - `security-scan/` - Automated security scanning
 - `strategic-compact/` - Code optimization
 - `tdd-workflow/` - TDD process guidance
-- `verification-loop/` - Quality assurance cycles
 
 ## 🚀 Usage
 
