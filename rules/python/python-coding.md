@@ -3,25 +3,25 @@ paths:
   - "**/*.py"
   - "**/*.pyi"
 ---
-# Python Coding Style
+# Pythonコーディングスタイル
 
-## Standards
+## 標準規約
 
-- Follow **PEP 8** conventions
-- Use **type annotations** on all function signatures
-- File size: 200–400 lines typical, 800 max
-- Functions: <50 lines, no deep nesting (>4 levels)
+- **PEP 8** の規約に従う
+- 全関数シグネチャに**型アノテーション**を付ける
+- ファイルサイズ: 通常200〜400行、最大800行
+- 関数: 50行未満、深いネスト禁止（4レベル超）
 
-## Formatting
+## フォーマット
 
 ```bash
 ruff format .      # フォーマット
 ruff check .       # リント
 ```
 
-## Immutability
+## イミュータビリティ
 
-ALWAYS create new objects, NEVER mutate existing ones:
+既存オブジェクトを変更せず、必ず新しいオブジェクトを生成する:
 
 ```python
 from dataclasses import dataclass
@@ -38,9 +38,9 @@ class Point(NamedTuple):
     y: float
 ```
 
-## File Paths
+## ファイルパス
 
-Use `pathlib.Path` (not string concatenation):
+文字列連結ではなく `pathlib.Path` を使用する:
 
 ```python
 from pathlib import Path
@@ -50,7 +50,7 @@ output_dir.mkdir(parents=True, exist_ok=True)
 df.to_csv(output_dir / "analysis1_result.csv", index=False)
 ```
 
-## Environment Variables
+## 環境変数
 
 ```python
 from dotenv import load_dotenv
@@ -60,27 +60,27 @@ load_dotenv()
 project_id = os.environ["GCP_PROJECT_ID"]
 ```
 
-## Error Handling
+## エラー処理
 
-- Handle errors explicitly; never silently swallow
-- Use specific exception types over bare `except:`
-- Log detailed context server-side, user-friendly messages at boundaries
+- エラーは明示的に処理する。サイレントに無視しない
+- 裸の `except:` ではなく具体的な例外型を使用する
+- 詳細なコンテキストはサーバーサイドでログ記録し、境界ではユーザーフレンドリーなメッセージを表示する
 
-## Pandas / NumPy Idioms
+## Pandas / NumPy イディオム
 
 ```python
-# GOOD: vectorized operations
+# 良い例: ベクトル化演算
 df["total"] = df["price"] * df["qty"]
 result = df.groupby("user_id")["revenue"].sum()
 
-# BAD: Python loops
+# 悪い例: Pythonループ
 for i, row in df.iterrows():
     df.at[i, "total"] = row["price"] * row["qty"]
 ```
 
-Priority: vectorized > `apply()` > explicit loop
+優先順位: ベクトル化 > `apply()` > 明示的ループ
 
-## Protocols (Duck Typing)
+## プロトコル（ダックタイピング）
 
 ```python
 from typing import Protocol
@@ -89,11 +89,11 @@ class DataLoader(Protocol):
     def load(self, path: str) -> "pd.DataFrame": ...
 ```
 
-## Code Quality Checklist
+## コード品質チェックリスト
 
-Before marking work complete:
-- [ ] Type annotations on all function signatures
-- [ ] `ruff format` and `ruff check` pass
-- [ ] No hardcoded magic numbers (use constants)
-- [ ] No mutation (immutable patterns used)
-- [ ] Proper error handling
+作業完了前に確認:
+- [ ] 全関数シグネチャに型アノテーションがある
+- [ ] `ruff format` と `ruff check` が通過する
+- [ ] マジックナンバーがない（定数を使用する）
+- [ ] ミューテーションがない（イミュータブルパターンを使用する）
+- [ ] 適切なエラー処理がある

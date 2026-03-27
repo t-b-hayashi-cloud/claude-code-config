@@ -1,13 +1,13 @@
-# Security Guidelines
+# セキュリティガイドライン
 
-## Secret Management
+## シークレット管理
 
-- NEVER hardcode secrets in source code
-- ALWAYS use environment variables or `.env` (gitignored)
-- Validate required secrets are present at startup
-- Rotate any secrets that may have been exposed
+- ソースコードにシークレットを直接書かない
+- 環境変数または `.env`（gitignore済み）を必ず使用する
+- 起動時に必要なシークレットの存在を検証する
+- 漏洩した可能性のあるシークレットはローテーションする
 
-Python example:
+Python 例:
 ```python
 import os
 from dotenv import load_dotenv
@@ -16,24 +16,24 @@ load_dotenv()
 api_key = os.environ["API_KEY"]  # Raises KeyError if missing
 ```
 
-## Commit Pre-checks
+## コミット前チェック
 
-Before ANY commit:
-- [ ] No hardcoded secrets (API keys, passwords, tokens)
-- [ ] `.env` is gitignored (never `.env.example`)
-- [ ] SQL queries use parameterized queries (no f-string interpolation)
-- [ ] Error messages don't leak sensitive data
+コミット前に必ず確認:
+- [ ] ハードコードされたシークレットなし（APIキー・パスワード・トークン）
+- [ ] `.env` が gitignore されている（`.env.example` は絶対にコミットしない）
+- [ ] SQLクエリはパラメータ化クエリを使用（f文字列補間は禁止）
+- [ ] エラーメッセージに機密データが含まれていない
 
-## Security Scanning
+## セキュリティスキャン
 
 ```bash
 bandit -r src/    # Python static security analysis
 ```
 
-## Security Response Protocol
+## セキュリティ対応プロトコル
 
-If security issue found:
-1. STOP immediately
-2. Use **security-reviewer** agent
-3. Fix CRITICAL issues before continuing
-4. Rotate any exposed secrets
+セキュリティ問題を発見したら:
+1. 即座に作業を停止する
+2. **security-reviewer** エージェントを使用する
+3. CRITICALな問題を修正してから作業を再開する
+4. 漏洩したシークレットをローテーションする

@@ -2,21 +2,21 @@
 paths:
   - "**/*.ipynb"
 ---
-# Jupyter Notebook Guidelines
+# Jupyterノートブックガイドライン
 
 ## セル構成の原則
 
 ノートブックは以下のセクション順に構成する:
 
 ```
-1. Setup & Imports
-2. Constants & Config
-3. Data Loading
-4. EDA (Exploratory Data Analysis)
-5. Feature Engineering / Preprocessing
-6. Modeling / Analysis
-7. Results & Visualization
-8. Summary
+1. セットアップ・インポート
+2. 定数・設定
+3. データ読み込み
+4. 探索的データ分析（EDA）
+5. 特徴量エンジニアリング・前処理
+6. モデリング・分析
+7. 結果・可視化
+8. まとめ
 ```
 
 ## 再現性の確保

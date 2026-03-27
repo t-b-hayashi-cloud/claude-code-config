@@ -2,20 +2,20 @@
 paths:
   - "**/*.py"
 ---
-# Python Testing
+# Pythonテスト
 
-## Minimum Coverage: 80%
+## 最低カバレッジ: 80%
 
 ```bash
 pytest --cov=src --cov-report=term-missing
 ```
 
-## Test-Driven Development (mandatory)
+## テスト駆動開発（必須）
 
-1. Write test first (RED) — `pytest` で失敗を確認
-2. Implement minimal code (GREEN) — `pytest` で通過を確認
-3. Refactor (IMPROVE)
-4. Verify 80%+ coverage
+1. テストを先に書く（RED）— `pytest` で失敗を確認
+2. 最小限のコードを実装する（GREEN）— `pytest` で通過を確認
+3. リファクタリング（IMPROVE）
+4. 80%以上のカバレッジを確認する
 
 ## pytest 構成
 
@@ -71,8 +71,8 @@ def test_save_csv(tmp_path):
     assert len(loaded) == 2
 ```
 
-## Troubleshooting
+## トラブルシューティング
 
-1. Use **tdd-guide** agent
-2. Check test isolation (avoid shared state)
-3. Fix implementation, not tests (unless tests are wrong)
+1. **tdd-guide** エージェントを使用する
+2. テストの独立性を確認する（共有状態を避ける）
+3. テストではなく実装を修正する（テスト自体が誤っている場合を除く）

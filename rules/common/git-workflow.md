@@ -1,29 +1,29 @@
-# Git & Development Workflow
+# Git・開発ワークフロー
 
-## Feature Implementation Workflow
+## 機能実装ワークフロー
 
-0. **Research & Reuse** _(mandatory before any new implementation)_
-   - Search PyPI/conda for existing packages before writing utility code
-   - Use `gh search code` to find existing implementations
-   - Prefer battle-tested libraries over hand-rolled solutions
+0. **調査・再利用** _(新規実装前に必須)_
+   - ユーティリティコードを書く前にPyPI/condaで既存パッケージを検索する
+   - `gh search code` で既存実装を探す
+   - 自作より実績あるライブラリを優先する
 
-1. **Plan First**
-   - Use **architect** agent for complex features
-   - Identify dependencies and risks, break down into phases
+1. **計画を立てる**
+   - 複雑な機能には **architect** エージェントを使用する
+   - 依存関係とリスクを特定し、フェーズに分割する
 
-2. **TDD Approach**
-   - Use **tdd-guide** agent
-   - Write tests first (RED) → implement (GREEN) → refactor (IMPROVE)
-   - Verify 80%+ coverage
+2. **TDDアプローチ**
+   - **tdd-guide** エージェントを使用する
+   - テスト先行（RED）→ 実装（GREEN）→ リファクタリング（IMPROVE）
+   - 80%以上のカバレッジを確認する
 
-3. **Code Review**
-   - Use **code-reviewer** agent after writing code
-   - Address CRITICAL and HIGH issues
+3. **コードレビュー**
+   - コード記述後に **code-reviewer** エージェントを使用する
+   - CRITICALおよびHIGHの問題に対処する
 
-4. **Commit & Push**
-   - Follow conventional commits format (see below)
+4. **コミット・プッシュ**
+   - 下記のコンベンショナルコミット形式に従う
 
-## Commit Message Format
+## コミットメッセージ形式
 
 ```
 <type>: <description>
@@ -31,14 +31,14 @@
 <optional body>
 ```
 
-Types: `feat`, `fix`, `refactor`, `docs`, `test`, `chore`, `perf`, `ci`
+タイプ: `feat`, `fix`, `refactor`, `docs`, `test`, `chore`, `perf`, `ci`
 
-Note: Attribution disabled globally via `~/.claude/settings.json`.
+注: Attribution は `~/.claude/settings.json` でグローバルに無効化済み。
 
-## Pull Request Workflow
+## プルリクエストワークフロー
 
-When creating PRs:
-1. Analyze full commit history (`git diff [base-branch]...HEAD`)
-2. Draft comprehensive PR summary
-3. Include test plan with TODOs
-4. Push with `-u` flag if new branch
+PR作成時:
+1. コミット履歴全体を分析する（`git diff [base-branch]...HEAD`）
+2. 包括的なPRサマリーを作成する
+3. TODOを含むテスト計画を記載する
+4. 新規ブランチの場合は `-u` フラグでプッシュする

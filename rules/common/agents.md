@@ -1,49 +1,49 @@
-# Agent Orchestration
+# エージェントオーケストレーション
 
-## Available Agents
+## 利用可能なエージェント
 
-Located in `~/.claude/agents/`:
+`~/.claude/agents/` に配置:
 
-| Agent | Purpose | When to Use |
-|-------|---------|-------------|
-| `analysis-planner` | Analysis design planning | New analysis requests, hypothesis & data design |
-| `architect` | Code design & implementation planning | Technical design, complex features, refactoring |
-| `tdd-guide` | Test-driven development | New features, bug fixes |
-| `code-reviewer` | Language-agnostic base code review | After writing code (parallel with python-reviewer & sql-reviewer) |
-| `python-reviewer` | Python-specific review | `.py` / `.ipynb` changes |
-| `sql-reviewer` | BigQuery SQL review | SQL file creation / modification |
-| `security-reviewer` | Security analysis | Before commits with secrets/auth |
-| `refactor-cleaner` | Dead code cleanup | Code maintenance |
-| `doc-updater` | Documentation & Notion writing (analysis plans/reports) | Updating docs/reports, writing to Notion |
-| `analysis-reporter` | Conclusion structuring for PPDAC cycle | Analysis Conclusion phase, aggregating results |
+| エージェント | 目的 | 使用タイミング |
+|------------|------|--------------|
+| `analysis-planner` | 分析設計の計画 | 新規分析リクエスト、仮説・データ要件の設計 |
+| `architect` | コード設計・実装計画 | 技術設計、複雑な機能、リファクタリング |
+| `tdd-guide` | テスト駆動開発 | 新機能、バグ修正 |
+| `code-reviewer` | 言語非依存の汎用コードレビュー | コード記述後（python-reviewer・sql-reviewerと並行して使用） |
+| `python-reviewer` | Python特化レビュー | `.py` / `.ipynb` の変更時 |
+| `sql-reviewer` | BigQuery SQLレビュー | SQLファイルの作成・修正時 |
+| `security-reviewer` | セキュリティ分析 | シークレット・認証を含むコミット前 |
+| `refactor-cleaner` | デッドコードのクリーンアップ | コードメンテナンス |
+| `doc-updater` | ドキュメント・Notion記載（分析計画・レポート） | ドキュメント更新、Notionへの記載 |
+| `analysis-reporter` | PPDACサイクルのConclusion構造化 | 分析Conclusionフェーズ、結果の集約 |
 
-## Proactive Agent Usage
+## エージェントの積極的な活用
 
-No user prompt needed — activate automatically:
-1. New analysis request (目的・仮説・データ要件の設計) → **analysis-planner**
-2. Complex code design or implementation → **architect**
-3. Code just written/modified → **code-reviewer**
-4. Bug fix or new feature → **tdd-guide**
-5. Analysis Conclusion phase (results aggregation & reporting) → **analysis-reporter**
+ユーザーのプロンプトを待たず、自動的に起動する:
+1. 新規分析リクエスト（目的・仮説・データ要件の設計） → **analysis-planner**
+2. 複雑なコード設計・実装 → **architect**
+3. コードを記述・修正した直後 → **code-reviewer**
+4. バグ修正・新機能の実装 → **tdd-guide**
+5. 分析Conclusionフェーズ（結果集約・レポーティング） → **analysis-reporter**
 
-## Parallel Task Execution
+## 並行タスク実行
 
-ALWAYS use parallel Task execution for independent operations:
+独立した処理には必ず並行タスク実行を使用する:
 
 ```
-# GOOD: Launch in parallel
-Agent 1: Security analysis of query module
-Agent 2: Performance review of data pipeline
-Agent 3: Type checking of utilities
+# 良い例: 並行して起動
+エージェント1: クエリモジュールのセキュリティ分析
+エージェント2: データパイプラインのパフォーマンスレビュー
+エージェント3: ユーティリティの型チェック
 
-# BAD: Sequential when unnecessary
-First agent 1, then agent 2, then agent 3
+# 悪い例: 不要な直列実行
+エージェント1が終わってからエージェント2、その後エージェント3
 ```
 
-## Multi-Perspective Analysis
+## 多角的分析
 
-For complex problems, split into sub-agents:
-- Factual reviewer
-- Senior data scientist
-- Security expert
-- Consistency reviewer
+複雑な問題はサブエージェントに分割する:
+- 事実確認レビュアー
+- シニアデータサイエンティスト
+- セキュリティエキスパート
+- 一貫性レビュアー
