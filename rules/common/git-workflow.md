@@ -24,16 +24,44 @@
    - 下記のコンベンショナルコミット形式に従う
 
 ## コミットメッセージ形式
+フォーマット: <type>(<scope>): <subject>
 
-```
-<type>: <description>
+type（必須）:
+- feat     - 新機能の追加
+- fix      - バグ修正
+- docs     - ドキュメントのみの変更
+- style    - コードの意味に影響しない変更（空白、フォーマット等）
+- refactor - バグ修正でも機能追加でもないコードの変更
+- perf     - パフォーマンス改善
+- test     - テストの追加・修正
+- chore    - ビルドプロセス・補助ツール・ライブラリの変更
+- notebook - Jupyterノートブックの追加・更新
+- data     - データファイルの追加・更新・削除
+- model    - モデルの追加・更新
 
-<optional body>
-```
+scope（任意）: 変更対象のモジュールや領域
+例: notebook/1.0, script, src, data, outputs, docs
 
-タイプ: `feat`, `fix`, `refactor`, `docs`, `test`, `chore`, `perf`, `ci`
+subject（必須）:
+- 変更内容を簡潔に記述（日本語可）
+- 動詞から始める（「〇〇を追加」「〇〇を修正」等）
+- 末尾にピリオド不要
+- 72文字以内
 
-注: Attribution は `~/.claude/settings.json` でグローバルに無効化済み。
+例:
+feat(notebook/4.0): 広告効果分析ノートブックを追加
+fix(src): 欠損値処理のバグを修正
+refactor: プロジェクト構造をデータサイエンス標準形式に再編成
+docs: README にデータ取得手順を追記
+chore: pyproject.toml の依存関係を更新
+
+本文（任意）: 変更の背景・理由・詳細を記述
+空行で subject と区切ること
+
+フッター（任意）:
+Breaking Change: <変更内容>
+Closes #<issue番号>
+
 
 ## プルリクエストワークフロー
 

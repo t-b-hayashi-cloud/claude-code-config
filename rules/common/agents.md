@@ -14,7 +14,7 @@
 | `sql-reviewer` | BigQuery SQLレビュー | SQLファイルの作成・修正時 |
 | `security-reviewer` | セキュリティ分析 | シークレット・認証を含むコミット前 |
 | `refactor-cleaner` | デッドコードのクリーンアップ | コードメンテナンス |
-| `doc-updater` | ドキュメント・Notion記載（分析計画・レポート） | ドキュメント更新、Notionへの記載 |
+| `doc-updater` | CLAUDE.md・README更新 | ドキュメント更新（CLAUDE.md・README） |
 | `analysis-reporter` | PPDACサイクルのConclusion構造化 | 分析Conclusionフェーズ、結果の集約 |
 
 ## エージェントの活用
