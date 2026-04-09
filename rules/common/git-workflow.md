@@ -62,6 +62,9 @@ chore: pyproject.toml の依存関係を更新
 Breaking Change: <変更内容>
 Closes #<issue番号>
 
+そのほか：
+コミットのメッセージは日本語で記述する
+
 
 ## プルリクエストワークフロー
 
