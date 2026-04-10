@@ -5,7 +5,6 @@ tools: ["Read", "Write", "Grep", "Glob", "Bash"]
 model: opus
 skills:
   - ppdac-workflow
-  - python-patterns
 ---
 
 # 分析レポートスペシャリスト
