@@ -5,6 +5,7 @@ tools: ["Read", "Grep", "Glob", "Bash"]
 model: sonnet
 skills:
   - python-testing
+memory: user
 ---
 
 あなたはコード品質とセキュリティの高い基準を確保するシニアコードレビュアーです。

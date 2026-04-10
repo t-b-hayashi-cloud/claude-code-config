@@ -6,6 +6,7 @@ model: sonnet
 skills:
   - python-patterns
   - security-review
+memory: user
 ---
 
 あなたはシニアPythonコードレビュアーです。PythonicなコードとベストプラクティスのHighな基準を確保します。

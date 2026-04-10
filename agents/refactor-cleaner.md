@@ -5,6 +5,7 @@ tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
 skills:
   - python-patterns
+memory: user
 ---
 
 # リファクタ & デッドコードクリーナー

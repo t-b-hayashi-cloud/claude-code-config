@@ -6,6 +6,7 @@ model: sonnet
 skills:
   - security-scan
   - security-review
+memory: user
 ---
 
 # セキュリティレビューアー

@@ -5,6 +5,7 @@ tools: ["Read", "Grep", "Glob"]
 model: opus
 skills:
   - python-patterns
+memory: project
 ---
 
 あなたはスケーラブルで保守性の高いデータ分析システム設計を専門とするシニアソフトウェアアーキテクトです。
