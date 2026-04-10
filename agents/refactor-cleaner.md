@@ -3,6 +3,8 @@ name: refactor-cleaner
 description: デッドコードクリーンアップと統合スペシャリスト。未使用コード、重複の削除、リファクタリングに積極的に使用してください。分析ツールを実行してデッドコードを特定し、安全に削除します。
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 model: sonnet
+skills:
+  - python-patterns
 ---
 
 # リファクタ & デッドコードクリーナー

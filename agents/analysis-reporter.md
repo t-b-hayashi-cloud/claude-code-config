@@ -3,6 +3,9 @@ name: analysis-reporter
 description: 分析結果を集約し、分析レポートテンプレートに沿ってConclusionを構造化するスペシャリスト。PPDACのConclusionフェーズで使用。docs/analysis_result/に直接保存。
 tools: ["Read", "Write", "Grep", "Glob", "Bash"]
 model: opus
+skills:
+  - ppdac-workflow
+  - python-patterns
 ---
 
 # 分析レポートスペシャリスト
