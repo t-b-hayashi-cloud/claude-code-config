@@ -16,6 +16,7 @@
 | `refactor-cleaner` | デッドコードのクリーンアップ | コードメンテナンス |
 | `doc-updater` | CLAUDE.md・README更新 | ドキュメント更新（CLAUDE.md・README） |
 | `analysis-reporter` | PPDACサイクルのConclusion構造化 | 分析Conclusionフェーズ、結果の集約 |
+| `adversary` | 敵対的批評・品質ゲート | Phase 1/2/5で問題設定・分析計画・結果の批評 |
 
 ## エージェントの活用
 
@@ -25,6 +26,7 @@
 3. コードを記述・修正した直後 → **code-reviewer**
 4. バグ修正・新機能の実装 → **tdd-guide**
 5. 分析Conclusionフェーズ（結果集約・レポーティング） → **analysis-reporter**
+6. 分析計画・問題設定・結果の品質ゲート（Phase 1/2/5） → **adversary**
 
 提案の文面例: 「`code-reviewer` エージェントでレビューしますか？」
 
