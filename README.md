@@ -18,6 +18,7 @@ Specialized AI agents for specific workflows:
 - **refactor-cleaner** - Dead code cleanup
 - **doc-updater** - Documentation maintenance and Notion writing (analysis plans & reports)
 - **analysis-reporter** - Conclusion structuring for PPDAC cycle (analysis results aggregation)
+- **adversary** - PPDAC quality gate and red team analysis (critical review of Problem/Plan/Conclusion phases)
 
 ### 📋 Rules (`rules/`)
 Context-specific guidelines organized by domain:
@@ -27,7 +28,7 @@ Context-specific guidelines organized by domain:
 
 ### 🛠️ Skills (`skills/`)
 Reusable skill definitions for specific tasks:
-- `ppdac-workflow/` - PPDAC data analysis workflow with agent orchestration
+- `ppdac-workflow/` - PPDAC data analysis workflow (start from any phase, auto-detects state) with agent orchestration and quality gates
 - `python-patterns/` - Python idioms and patterns
 - `python-testing/` - Testing strategies
 - `search-first/` - Code search workflows
@@ -35,68 +36,3 @@ Reusable skill definitions for specific tasks:
 - `security-scan/` - Automated security scanning
 - `strategic-compact/` - Code optimization
 - `tdd-workflow/` - TDD process guidance
-
-## 🚀 Usage
-
-### Installation
-
-1. Clone this repository:
-   ```bash
-   git clone <your-repo-url> ~/.claude-public
-   ```
-
-2. Copy desired configurations to your Claude Code directory:
-   ```bash
-   # Copy all agents
-   cp -r ~/.claude-public/agents/* ~/.claude/agents/
-
-   # Copy all rules
-   cp -r ~/.claude-public/rules/* ~/.claude/rules/
-
-   # Copy all skills
-   cp -r ~/.claude-public/skills/* ~/.claude/skills/
-   ```
-
-3. Or symlink for automatic updates:
-   ```bash
-   ln -s ~/.claude-public/agents ~/.claude/agents
-   ln -s ~/.claude-public/rules ~/.claude/rules
-   ln -s ~/.claude-public/skills ~/.claude/skills
-   ```
-
-### Customization
-
-Feel free to fork and modify these configurations for your needs:
-- Agents: Adjust personas, instructions, and workflows
-- Rules: Add project-specific guidelines
-- Skills: Create new skill definitions
-
-## 📖 Documentation
-
-Each component includes inline documentation:
-- Agents: See individual `.md` files in `agents/`
-- Rules: Context files in `rules/*/`
-- Skills: `SKILL.md` in each skill directory
-
-## 🔒 Security Note
-
-This repository contains **only public configuration files**. Sensitive data (credentials, history, projects) is never included. See `.gitignore` for exclusion rules.
-
-## 📄 License
-
-MIT License (or your preferred license)
-
-## 🤝 Contributing
-
-Contributions welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request with clear descriptions
-
-## ⚠️ Disclaimer
-
-This is a personal configuration repository. Configurations may reflect opinionated workflows and may not suit all use cases. Use at your own discretion.
-
----
-
-**Note**: This repository is not officially affiliated with Anthropic. Claude Code is a product of Anthropic.
